@@ -822,7 +822,7 @@ class polyidusEngine:
         if len(self.fastq) == 1:
             job1 = [
                 "bowtie2", "-p", "1", "--local", "-x", self.hostindex,
-                "U", self.fastq_path_1]
+                "-U", self.fastq_path_1]
             job2 = [
                 "samtools",
                 "view", "-bS", "-F", "4", "-o",
